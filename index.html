@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Manager</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="min-h-screen relative">
+
+    <!-- Main Content Container -->
+    <div id="app-container" class="min-h-screen relative flex flex-col">
+        <!-- Screens will be rendered here dynamically -->
+        <div id="home-screen" class="p-4 pb-20 flex-grow"></div>
+        <div id="books-screen" class="p-4 pb-20 hidden flex-grow"></div>
+        <div id="stats-screen" class="p-4 pb-20 hidden flex-grow flex items-center justify-center">
+            <div class="text-center">
+                <span class="inline-block w-12 h-12 mb-4" id="stats-icon"></span>
+                <p class="text-gray-400">Statistics coming soon</p>
+            </div>
+        </div>
+        <div id="settings-screen" class="p-4 pb-20 hidden flex-grow flex items-center justify-center">
+            <div class="text-center">
+                <span class="inline-block w-12 h-12 mb-4" id="settings-icon"></span>
+                <p class="text-gray-400">Settings coming soon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Transaction Modal -->
+    <div id="add-transaction-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-end z-50 hidden">
+        <div id="add-transaction-modal-content" class="w-full rounded-t-3xl p-6 space-y-4">
+            <!-- Content will be injected here -->
+        </div>
+    </div>
+
+    <!-- Add/Edit Book Modal -->
+    <div id="book-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-end z-50 hidden">
+        <div id="book-modal-content" class="w-full rounded-t-3xl p-6 space-y-4">
+            <!-- Content will be injected here -->
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-confirmation-modal"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div id="delete-confirmation-modal-content" class="w-full max-w-sm rounded-2xl p-6 space-y-4 mx-4">
+            <!-- Content will be injected here -->
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div id="bottom-navigation" class="fixed bottom-0 left-0 right-0 border-t px-4 py-2">
+        <div class="flex justify-around">
+            <!-- Navigation items will be injected here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
